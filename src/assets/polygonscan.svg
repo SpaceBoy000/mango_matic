@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54">
+  <circle fill="#8247e5" cx="27" cy="27" r="27"/>
+  <path transform="translate(8 10)" fill="#fff" d="M29 10h-2l-6 4-4 2-5 3H9l-4-3-1-2V9l1-2 4-2h3l4 2 1 2v4l4-3V7l-1-2-8-5H9L1 5 0 7v9l1 2 8 5h3l5-3 4-2 6-3h2l4 2 1 2v5l-1 2-4 3h-2l-5-3-1-2v-3l-4 2v3l2 3 8 4h2l8-4 1-2V17l-1-2-8-5z"/>
+</svg>
