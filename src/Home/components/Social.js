@@ -46,7 +46,7 @@ export default function Social() {
             <i className='fa fa-twitter' style={{color: '#000', fontSize: '26px'}}></i>
             <SocialText>Twitter</SocialText>
           </a>
-          <a href="" target="_blank" style={{color: 'inherit', textDecoration: 'inherit', display: 'flex', alignItems: 'center'}}>
+          <a href="./doc.pdf" target="_blank" style={{color: 'inherit', textDecoration: 'inherit', display: 'flex', alignItems: 'center'}}>
             <i className='fa fa-book' style={{color: '#000', fontSize: '26px'}}></i>
             <SocialText>Docs</SocialText>
           </a>
