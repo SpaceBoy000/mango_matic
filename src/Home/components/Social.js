@@ -43,7 +43,7 @@ export default function Social() {
             <i className='fa fa-telegram' style={{color: '#000', fontSize: '26px'}}></i>
             <SocialText>Telegram</SocialText>
           </a>
-          <a href="https://twitter.com/" target="_blank" style={{color: 'inherit', textDecoration: 'inherit', display: 'flex', alignItems: 'center'}}>
+          <a href="https://twitter.com/MangoFinanceCEO" target="_blank" style={{color: 'inherit', textDecoration: 'inherit', display: 'flex', alignItems: 'center'}}>
             <i className='fa fa-twitter' style={{color: '#000', fontSize: '26px'}}></i>
             <SocialText>Twitter</SocialText>
           </a>
