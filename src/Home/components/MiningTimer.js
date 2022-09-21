@@ -138,7 +138,7 @@ export default function MiningTimer() {
           </Typography>
 
           <Box sx={{ textAlign: 'center' }}>
-            <Typography variant="body6" sx={{ mb: 1 }}>
+            <Typography variant="body5" sx={{ mb: 1 }}>
               {padLeadingZeros(countup.seconds, 2)}
             </Typography>
             <div></div>
