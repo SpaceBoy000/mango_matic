@@ -437,7 +437,7 @@ export default function BakeCard() {
               onClick={bake}
             >
               {/* {t("Plant Mangos seeds")} */}
-              Plant Mangos seeds
+              Plant Mango Seeds
             </DevilButton>
           </Box>
           <Divider />
