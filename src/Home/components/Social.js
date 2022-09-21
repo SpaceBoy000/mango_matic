@@ -5,6 +5,7 @@ import { styled } from "@mui/system";
 import { useTranslation } from "react-i18next";
 import auditLogo from "../../assets/audit.svg";
 import contract from "../../assets/polygonscan.svg";
+import {config} from "../../config";
 
 const CardWrapper = styled("div")(({ theme }) => ({
   maxWidth: 400,
@@ -38,7 +39,7 @@ export default function Social() {
         </Typography>
         <Box paddingTop={2} sx={{ display: 'flex', justifyContent: 'space-around'}}>
 
-          <a href="https://t.me/" target="_blank" style={{color: 'inherit', textDecoration: 'inherit', display: 'flex', alignItems: 'center'}}>
+          <a href="https://t.me/mangofinanceofficial" target="_blank" style={{color: 'inherit', textDecoration: 'inherit', display: 'flex', alignItems: 'center'}}>
             <i className='fa fa-telegram' style={{color: '#000', fontSize: '26px'}}></i>
             <SocialText>Telegram</SocialText>
           </a>
@@ -58,7 +59,7 @@ export default function Social() {
             </span>
             <SocialText>Audit &nbsp;</SocialText>
           </a>
-          <a href="" target="_blank" style={{color: 'inherit', textDecoration: 'inherit', display: 'flex', alignItems: 'center'}}>
+          <a href={config.scanLink} target="_blank" style={{color: 'inherit', textDecoration: 'inherit', display: 'flex', alignItems: 'center'}}>
             <span>
             <img className="u-sm-avatar" src={contract} alt="Polygon" style={{width: '26px'}}></img>
             </span>
