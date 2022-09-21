@@ -73,7 +73,7 @@ export default function MiningTimer() {
     const last = deployTime.getTime() / 1000;
     const now = Date.now() / 1000;
     if (now < last) {
-      return "MINING STARTS IN:";
+      return "Farming starts in:";
     } else {
       return "RUNNING TIME:";
     }

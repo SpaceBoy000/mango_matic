@@ -40,6 +40,7 @@ const DevilButton = styled(Button)(({ theme }) => ({
   background: "#f3ba2f",
   color: theme.typography.allVariants.color,
   boxShadow: 'none',
+  textTransform: 'capitalize',
 }));
 
 const ButtonContainer = styled(Grid)(({ theme }) => ({
@@ -408,7 +409,7 @@ export default function BakeCard() {
           alignItems="center"
           mt={3}
         >
-          <Typography variant="body1" color="black">{t("Total Referral Reward")}</Typography>
+          <Typography variant="body1" color="black">{t("Total Referral Rewards")}</Typography>
           <Typography variant="h5">{walletBalance.refRewards} MATIC</Typography>
         </Grid>
         {/* <Grid
@@ -435,7 +436,8 @@ export default function BakeCard() {
               disabled={wrongNetwork || !address || +bakeBNB === 0 || loading}
               onClick={bake}
             >
-              {t("PLANT SEEDS")}
+              {/* {t("Plant Mangos seeds")} */}
+              Plant Mangos seeds
             </DevilButton>
           </Box>
           <Divider />
@@ -478,7 +480,7 @@ export default function BakeCard() {
                 disabled={wrongNetwork || !address || countdown.alive || loading}
                 onClick={reBake}
               >
-                RE-PLANT SEEDS
+                Re-plant Mango Seeds
                 {/* { countdown.alive ? countdown.hours + "H " + countdown.minutes + "M " + countdown.seconds + "S" : 'RE-PLANT SEEDS' } */}
               </DevilButton>
             </Grid>
@@ -490,7 +492,7 @@ export default function BakeCard() {
                 disabled={wrongNetwork || !address || loading}
                 onClick={eatBeans}
               >
-                {t("HARVEST SEEDS")}
+                {t("Eat Mangos")}
               </DevilButton>
             </Grid>
           </ButtonContainer>

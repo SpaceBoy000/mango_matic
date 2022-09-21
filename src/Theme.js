@@ -35,8 +35,8 @@ const theme = createTheme({
     },
     body5: {
       fontSize: 40,
-      // color: "rgb(123,63,228)",
-      color: "#198754",
+      color: 'black',
+      // color: "#198754",
       fontWeight: 900,
     },
     body6: {
