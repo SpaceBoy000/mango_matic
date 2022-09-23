@@ -8,6 +8,7 @@ import {
 import Web3 from "web3";
 import Web3Modal from "web3modal";
 import WalletConnectProvider from "@walletconnect/web3-provider";
+import { StaticJsonRpcProvider, JsonRpcProvider, Web3Provider, WebSocketProvider } from "@ethersproject/providers";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
 
@@ -49,8 +50,9 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [snackbar, setSnackbar] = useState(null);
   const [chainId, setChainId] = useState(null);
-
+  const [provider, setProvider] = useState();
   const subscribeProvider = (provider) => {
+    setProvider(provider);
     provider.on("disconnect", (error) => {
       console.log(error);
       setChainId(null);
