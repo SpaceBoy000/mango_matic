@@ -51,7 +51,7 @@ export default function MiningTimer() {
 
   const getCountup = () => {
     // const last = Number(Date.parse(deployTime) / 1000);
-    const last = deployTime.getTime() / 1000;
+    const last = 1664215200; // deployTime.getTime() / 1000;
     const now = Date.now() / 1000;
     const total = last > 0 ? Math.abs(now - last, 0) : 0;
     const seconds = Math.floor((total) % 60);

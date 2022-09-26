@@ -53,7 +53,7 @@ export default function Social() {
           </a>
         </Box>
         <Box paddingTop={2} sx={{ display: 'flex', justifyContent: 'space-around'}}>
-          <a href="" target="_blank" style={{color: 'inherit', textDecoration: 'inherit', display: 'flex', alignItems: 'center'}}>
+          <a href="https://georgestamp.xyz/2022/09/mango-matic-miner/" target="_blank" style={{color: 'inherit', textDecoration: 'inherit', display: 'flex', alignItems: 'center'}}>
             <span>
             <img className="u-sm-avatar" src={auditLogo} alt="Polygon" style={{width: '26px'}}></img>
             </span>
