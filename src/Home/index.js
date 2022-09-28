@@ -28,7 +28,7 @@ export default function Home() {
   const { address } = useAuthContext();
   return (
     <Wrapper>
-        <MiningTimer/>
+        {/* <MiningTimer/> */}
         <DailyProfit />
         <BakeCard />
         <NutritionFacts />
